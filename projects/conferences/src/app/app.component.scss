@@ -1,0 +1,26 @@
+@use 'breakpoints';
+
+:host {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 5.5rem;
+  height: 100vh;
+
+  @include breakpoints.use(m, l, xl) {
+    grid-template-rows: 1fr;
+    grid-template-columns: 7rem auto;
+  }
+}
+
+main {
+  height: 100%;
+  overflow: hidden;
+}
+
+sl-navigation-drawer {
+  grid-column: 1;
+}
+
+sl-bottom-bar {
+  grid-row: 2;
+}

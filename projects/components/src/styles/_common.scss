@@ -1,0 +1,16 @@
+:root {
+  // typography
+  --md-sys-font-family: 'Roboto', sans-serif;
+  // layout
+
+  --outline-size: 0.0625rem;
+  --outline-size-negative: -0.0625rem;
+
+  --highlight-content: unset; // use -2 to highlight surface only or unset to highlight content too
+  --color-backdrop: hsla(0, 0%, 0%, 0.38);
+  --app-logo: url('/logo.svg');
+  --color-outline-focus: var(--md-sys-color-primary);
+
+  --scrollbar-width: 0.75rem;
+  --scrollbar-thumb-radius: 5px;
+}

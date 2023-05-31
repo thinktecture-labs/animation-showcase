@@ -1,0 +1,13 @@
+:host {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.messages {
+  display: grid;
+  gap: var(--md-sys-size-4);
+  width: 50%;
+}

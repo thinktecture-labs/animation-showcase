@@ -1,0 +1,38 @@
+:host {
+  display: grid;
+  gap: var(--md-sys-size-4);
+  padding-top: var(--md-sys-size-8);
+}
+
+h2 {
+  color: #2d2d2d;
+  margin: unset;
+}
+
+app-search-bar {
+  padding: var(--md-sys-size-4);
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.conferences-container {
+  display: grid;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, 200px);
+  gap: var(--md-sys-size-4);
+  overflow-y: auto;
+  max-width: 100%;
+  padding: var(--md-sys-size-4);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.messages-container {
+  display: grid;
+  gap: var(--md-sys-size-4);
+  padding: var(--md-sys-size-4);
+  max-width: 100%;
+}

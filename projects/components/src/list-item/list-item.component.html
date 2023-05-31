@@ -1,0 +1,13 @@
+<div class="author">{{ model?.shorthand }}</div>
+<div class="content">
+  <h4>{{ model?.author }}</h4>
+  <p class="duration">20 min ago</p>
+  <p class="text">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi consequuntur fugiat
+    perspiciatis porro qui repellat veritatis. Aliquid assumenda corporis ipsum necessitatibus? Aut
+    dolorem ipsa nihil quae quis rerum sed.
+  </p>
+</div>
+<button class="star" mat-ripple (click)="close.emit(model?.id)">
+  <mat-icon fontIcon="close"></mat-icon>
+</button>

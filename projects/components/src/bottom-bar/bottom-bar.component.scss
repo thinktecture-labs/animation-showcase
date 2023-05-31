@@ -1,0 +1,18 @@
+:host {
+  display: grid;
+  grid-template-columns: 4rem auto;
+  gap: var(--md-sys-size-4);
+  background-color: var(--md-sys-color-surface);
+  padding: var(--md-sys-size-2) var(--md-sys-size-4);
+}
+
+.logo {
+  height: 4.5rem;
+  background: var(--md-sys-company-logo);
+  background-size: contain;
+}
+
+.horizontal {
+  justify-self: center;
+  align-self: center;
+}

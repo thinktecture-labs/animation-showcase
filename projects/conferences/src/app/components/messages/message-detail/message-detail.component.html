@@ -1,0 +1,48 @@
+<ng-container *ngIf="message$ | async as model">
+  <header>
+    <button class="back" matRipple [routerLink]="['/']">
+      <mat-icon fontIcon="arrow_back"></mat-icon>
+    </button>
+    <div class="heading">
+      <h3>Titel XYZ</h3>
+      <span> 3 Messages </span>
+    </div>
+    <div class="options">
+      <mat-icon fontIcon="more_vert"></mat-icon>
+    </div>
+  </header>
+  <main>
+    <div class="content-header">
+      <div class="author">{{ model?.shorthand }}</div>
+      <div class="header">
+        <h4>{{ model?.author }}</h4>
+        <p class="duration">20 min ago</p>
+      </div>
+      <div class="star">
+        <mat-icon fontIcon="close"></mat-icon>
+      </div>
+    </div>
+    <div class="text">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis modi molestias non vel
+        veniam! Excepturi explicabo, harum iste laboriosam magni nihil nobis nostrum perferendis
+        quos soluta sunt vitae, voluptatem, voluptatibus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis modi molestias non vel
+        veniam! Excepturi explicabo, harum iste laboriosam magni nihil nobis nostrum perferendis
+        quos soluta sunt vitae, voluptatem, voluptatibus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis modi molestias non vel
+        veniam! Excepturi explicabo, harum iste laboriosam magni nihil nobis nostrum perferendis
+        quos soluta sunt vitae, voluptatem, voluptatibus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis modi molestias non vel
+        veniam! Excepturi explicabo, harum iste laboriosam magni nihil nobis nostrum perferendis
+        quos soluta sunt vitae, voluptatem, voluptatibus.
+      </p>
+    </div>
+  </main>
+</ng-container>

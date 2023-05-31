@@ -1,0 +1,70 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@use 'sass:map';
+@use 'typography-config';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$primary-palette: map.merge(
+    mat.$indigo-palette,
+    (
+      500: var(--md-sys-color-primary),
+      contrast: (
+        500: var(--md-sys-color-on-primary)
+      )
+    )
+);
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$design-system-impl-material-primary: mat.define-palette($primary-palette);
+
+$components: (
+  color: (
+    foreground: (
+      text: var(--md-sys-color-on-surface),
+    ),
+    background: (
+      app-bar: var(--md-sys-color-surface),
+      background: var(--md-sys-color-surface),
+      dialog: var(--md-sys-color-surface-container-low),
+    )
+  ),
+  typography: typography-config.$mapping
+);
+
+@media (prefers-color-scheme: light) {
+  // Create the theme object. A theme consists of configurations for individual
+  // theming systems such as "color" or "typography".
+  $base-theme: mat.define-light-theme((
+    color: (
+      primary: $design-system-impl-material-primary,
+      accent: $design-system-impl-material-primary,
+    ),
+  ));
+
+
+  // Include theme styles for core and each component used in your app.
+  // Alternatively, you can import and @include the theme mixins for each component
+  // that you are using.
+  @include mat.all-component-themes(map.deep-merge($base-theme, $components));
+}
+
+@media (prefers-color-scheme: dark) {
+  $base-theme: mat.define-dark-theme((
+    color: (
+      primary: $design-system-impl-material-primary,
+      accent: $design-system-impl-material-primary,
+    ),
+  ));
+
+  @include mat.all-component-themes(map.deep-merge($base-theme, $components));
+}
+

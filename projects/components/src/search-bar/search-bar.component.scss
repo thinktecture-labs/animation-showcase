@@ -1,0 +1,26 @@
+:host {
+  background-color: white;
+  border-radius: var(--md-sys-size-8);
+  padding: var(--md-sys-size-4) var(--md-sys-size-7);
+  display: grid;
+  grid-template-columns: auto 2rem;
+  gap: var(--md-sys-size-4);
+  margin: 0 var(--md-sys-size-4);
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.avatar {
+  width: var(--md-sys-size-8);
+  height: var(--md-sys-size-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffc383;
+  font-weight: bold;
+}

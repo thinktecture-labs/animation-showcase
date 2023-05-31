@@ -1,0 +1,51 @@
+@use 'typography';
+@use 'state';
+
+.mat-mdc-progress-bar {
+  --mdc-linear-progress-track-color: var(--md-sys-color-surface-container-highest) !important;
+}
+
+.mat-mdc-list-base {
+  --mdc-list-list-item-container-shape: var(--md-sys-shape-corner-full) !important;
+  &.horizontal {
+    display: flex;
+    width: 60%;
+    padding: unset;
+
+    .mdc-list-item {
+      margin-bottom: unset;
+    }
+  }
+}
+
+.mdc-list-item__primary-text {
+  @include typography.label-medium;
+}
+
+.mdc-list-item {
+  @include state.interactive;
+
+  padding-left: unset !important;
+  padding-right: unset !important;
+  text-align: center;
+  cursor: pointer;
+  border-radius: var(--md-sys-size-2);
+  margin-bottom: var(--md-sys-size-4);
+}
+
+.mdc-list-item__primary-text {
+  display: grid;
+  justify-content: center;
+
+  .mat-icon {
+    width: unset;
+  }
+}
+
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.mdc-text-field--filled {
+  background-color: transparent !important;
+}

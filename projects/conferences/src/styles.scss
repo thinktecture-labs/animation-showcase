@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other styles files */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px,
+    0px 0px, 0px 0px, 0px 0px;
+  background-image: radial-gradient(
+      18% 28% at 24% 50%,
+      var(--md-sys-color-primary-fixed-dim) 7%,
+      #073aff00 100%
+    ),
+    radial-gradient(18% 28% at 18% 71%, var(--md-sys-color-surface-container) 6%, #073aff00 100%),
+    radial-gradient(70% 53% at 36% 76%, var(--md-sys-color-primary-fixed-dim) 0%, #073aff00 100%),
+    radial-gradient(42% 53% at 15% 94%, var(--md-sys-color-primary-fixed-dim) 7%, #073aff00 100%),
+    radial-gradient(42% 53% at 34% 72%, var(--md-sys-color-primary-fixed-dim) 7%, #073aff00 100%),
+    radial-gradient(18% 28% at 35% 87%, var(--md-sys-color-primary-fixed-dim) 7%, #073aff00 100%),
+    radial-gradient(31% 43% at 7% 98%, var(--md-sys-color-primary-fixed-dim) 24%, #073aff00 100%),
+    radial-gradient(21% 37% at 72% 23%, var(--md-sys-color-primary) 24%, #073aff00 100%),
+    radial-gradient(35% 56% at 91% 74%, var(--md-sys-color-tertiary-fixed) 9%, #073aff00 100%),
+    radial-gradient(74% 86% at 67% 38%, var(--md-sys-color-surface-tint) 24%, #073aff00 100%),
+    linear-gradient(
+      125deg,
+      var(--md-sys-color-primary-fixed-dim) 1%,
+      var(--md-sys-color-primary) 100%
+    );
+  background-repeat: no-repeat;
+  color: var(--md-sys-color-on-surface);
+}
