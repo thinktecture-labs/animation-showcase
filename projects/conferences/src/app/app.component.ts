@@ -6,6 +6,7 @@ import {
   NavigationDrawerComponent,
   XSmallAndSmallScreenSizeDirective,
 } from '@sl/components';
+import { trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -19,5 +20,6 @@ import {
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [trigger('navigation', [])],
 })
 export class AppComponent {}

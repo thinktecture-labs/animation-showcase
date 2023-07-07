@@ -1,5 +1,6 @@
-<div class="messages">
+<div @messages class="messages">
   <sl-list-item
+    @messageItem
     *ngFor="let message of messages$ | async"
     [model]="message"
     (close)="deleteMessage($event)"

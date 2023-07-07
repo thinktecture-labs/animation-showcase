@@ -1,15 +1,16 @@
-<sl-search-bar></sl-search-bar>
-<div class="conferences-container">
+<sl-search-bar @searchbarInit></sl-search-bar>
+<div @conferencesInit class="conferences-container">
   <sl-card
     *ngFor="let conference of conferences$ | async"
     [routerLink]="['..', 'conferences', conference.id]"
     [model]="conference"
   ></sl-card>
 </div>
-<div class="messages-container">
+<div @messagesInit class="messages-container">
   <h2>Messagees from ...</h2>
   <sl-list-item
-    *ngFor="let message of messages$ | async"
+    @messageItem
+    *ngFor="let message of messages$ | async; trackBy: trackMessageById"
     [routerLink]="['..', 'messages', message.id]"
     [model]="message"
     (close)="deleteMessage($event)"
