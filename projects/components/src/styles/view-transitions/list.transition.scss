@@ -1,0 +1,45 @@
+::view-transition-old(list-container):only-child {
+  display: none;
+}
+::view-transition-new(list-back-button) {
+  animation: var(--md-sys-motion-duration-medium-1) var(--md-sys-motion-easing-emphasized) 900ms
+    both scale-in;
+}
+
+::view-transition-old(list-back-button) {
+  animation: var(--md-sys-motion-duration-short-1) var(--md-sys-motion-easing-emphasized) both
+    scale-in reverse;
+}
+
+::view-transition-new(list-details-header) {
+  animation: var(--md-sys-motion-duration-medium-2) var(--md-sys-motion-easing-emphasized)
+    var(--md-sys-motion-view-transition-duration) both fade-in;
+}
+
+::view-transition-old(list-details-header) {
+  animation: var(--md-sys-motion-duration-medium-1) var(--md-sys-motion-easing-emphasized) both
+    fade-in reverse;
+}
+
+::view-transition-old(list-search-bar):only-child {
+  animation: var(--md-sys-motion-duration-medium-2) var(--md-sys-motion-easing-emphasized) both
+      fade-out,
+    var(--md-sys-motion-duration-long-4) var(--md-sys-motion-easing-emphasized) both leave-top;
+}
+
+::view-transition-new(list-search-bar):only-child {
+  animation: var(--md-sys-motion-duration-medium-4) ease-in both fade-out reverse,
+    var(--md-sys-motion-view-transition-duration) ease-in both leave-top reverse;
+}
+
+::view-transition-old(list-card-container):only-child {
+  animation: var(--md-sys-motion-duration-medium-2) var(--md-sys-motion-easing-emphasized) both
+      fade-out,
+    var(--md-sys-motion-duration-long-4) var(--md-sys-motion-easing-emphasized) both scale-in
+      reverse;
+}
+
+::view-transition-new(list-card-container):only-child {
+  animation: var(--md-sys-motion-duration-long-2) ease-in both fade-out reverse,
+    var(--md-sys-motion-duration-long-2) ease-in both partial-scale-in;
+}

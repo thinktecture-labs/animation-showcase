@@ -2,6 +2,7 @@
   display: block;
   padding: 2rem 0.5rem;
   height: 100%;
+  view-transition-name: list-container;
 }
 
 h3,
@@ -11,6 +12,7 @@ p {
 }
 
 header {
+  view-transition-name: list-header;
 }
 
 header,
@@ -29,6 +31,11 @@ main {
   border-radius: 2rem;
   background-color: white;
   height: calc(100% - 8rem);
+  view-transition-name: list-item;
+}
+
+button {
+  view-transition-name: list-back-button;
 }
 
 button,

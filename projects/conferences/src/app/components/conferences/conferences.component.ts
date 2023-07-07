@@ -22,12 +22,6 @@ import { query, transition, trigger } from '@angular/animations';
   animations: [
     trigger('cards', [
       transition(':enter', [query(':enter', staggerFadeFactory(), { optional: true })]),
-        query(
-          ':enter',
-          [staggerFadeFactory(getCSSPropertyValue('--md-sys-motion-duration-medium-1'))],
-          { optional: true },
-        ),
-      ]),
     ]),
     trigger('drawer', [
       transition(':enter', slideInOutAnimationFactory('X', '100%', '0')),

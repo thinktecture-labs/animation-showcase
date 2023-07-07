@@ -1,17 +1,22 @@
-<sl-search-bar @searchbarInit></sl-search-bar>
-<div @conferencesInit class="conferences-container">
+<sl-search-bar viewTransition></sl-search-bar>
+<div viewTransition class="conferences-container">
   <sl-card
     *ngFor="let conference of conferences$ | async"
-    [routerLink]="['..', 'conferences', conference.id]"
+    viewTransition="card"
+    [route]="['conferences', conference.id]"
+    [triggerId]="conference.id"
+    [class.active]="(recentOpenedDetails$ | async) === conference.id"
     [model]="conference"
   ></sl-card>
 </div>
-<div @messagesInit class="messages-container">
+<div viewTransition class="messages-container">
   <h2>Messagees from ...</h2>
   <sl-list-item
-    @messageItem
+    viewTransition="list"
     *ngFor="let message of messages$ | async; trackBy: trackMessageById"
-    [routerLink]="['..', 'messages', message.id]"
+    [route]="['messages', message.id]"
+    [triggerId]="message.id"
+    [class.active]="(recentOpenedDetails$ | async) === message.id"
     [model]="message"
     (close)="deleteMessage($event)"
   ></sl-list-item>

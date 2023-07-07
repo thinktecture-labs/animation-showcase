@@ -1,5 +1,5 @@
-@use 'sys-color-dark';
-@use 'sys-color-light';
-@use 'angular-material/theming';
-@use 'overrides/drawer';
-@use 'overrides/mdc';
+@forward 'sys-color-dark';
+@forward 'sys-color-light';
+@forward 'angular-material/theming';
+@forward 'overrides/drawer';
+@forward 'overrides/mdc';
