@@ -1,4 +1,4 @@
-<div class="cards">
+<div @cards class="cards">
   <sl-card
     *ngFor="let conference of conferences$ | async"
     [model]="conference"
@@ -6,6 +6,7 @@
   ></sl-card>
 </div>
 <sl-conference-info-drawer
+  @drawer
   *ngIf="selectedConference$ | async as selectedConf"
   [conference]="selectedConf"
   (closed)="selectedConference$.next(undefined)"

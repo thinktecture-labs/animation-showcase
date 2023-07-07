@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListItemComponent } from '@sl/components';
+import { ListItemComponent, slideDeletAnimation, slideFadeAnimationFactory } from '@sl/components';
 import { DataService } from '../../data.service';
+import { query, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-messages',
@@ -10,6 +11,10 @@ import { DataService } from '../../data.service';
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [
+    trigger('messages', [transition(':enter', [query(':enter', slideFadeAnimationFactory())])]),
+    trigger('messageItem', [transition(':leave', [slideDeletAnimation()])]),
+  ],
 })
 export class MessagesComponent {
   private readonly dataService = inject(DataService);

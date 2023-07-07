@@ -6,8 +6,12 @@
   width: 200px;
   cursor: pointer;
   overflow: hidden;
+  transition: transform var(--md-sys-motion-duration-medium-4)
+      var(--md-sys-motion-easing-emphasized),
+    filter var(--md-sys-motion-duration-medium-1) var(--md-sys-motion-easing-emphasized);
 
   &:hover {
+    transform: scale(1.1);
     .image {
       filter: unset;
     }
